@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ITT406 - Dela Torre </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <script src="script.js"></script>
+</head>
+
+<body onload="initClock()">
+  <header>
+    <a href="index.html" style="display:flex;">
+    <img src="coatOfArms.png">
+    <img src="philLogo.png">
+    </a>
+    <div class="datetime">
+      <div class="date">
+        <span id="dayname">Day</span>,
+        <span id="month">Month</span>
+        <span id="daynum">00</span>,
+        <span id="year">Year</span>
+      </div>
+      <div class="time">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+        <span id="period">AM</span>
+      </div>
+    </div>
+  </header>
+  <div class="sidenav">
+    <i class="preview fa fa-reorder"></i>
+    <button class="dropdown-btn fade-in"> About Philippines 
+    <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="index.html#history"> History </a>
+      <a href="index.html#geography"> Geography and Environment </a>
+      <a href="index.html#demographics"> Demographics </a>
+      <a href="index.html#culture"> Culture </a>
+    </div>
+    <button class="dropdown-btn fade-in"> Tourist Attractions 
+    <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="index.html#luzon"> Luzon </a>
+      <a href="index.html#visayas"> Visayas </a>
+      <a href="index.html#mindanao"> Mindanao </a>
+    </div>
+    <a href="Videos.html" class="fade-in"><i class="fa fa-fw fa-youtube-play"></i> Video Gallery </a>
+    <a href="Login.html" class="fade-in"><i class="fa fa-fw fa-user"></i> Log-In </a>
+    <a href="Contact.html" class="fade-in"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+  </div>
+
+  <script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+  </script>
+  <div style="margin-top: 8%; margin-left: 8%;margin-right: 5%;">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 id="history">Philippine History</h1>
+            <p>Portuguese navigator Ferdinand Magellan found the Philippines in 1521 while searching for a route west to the Spice Islands. The Spanish expedition led by Magellan—who was killed in the Battle of Mactan—made contact with the local populations. Despite this, the Spanish returned, and in 1565 Miguel Lopez de Legazpi established Cebu's first Spanish settlement, starting more than three centuries of Spanish rule.
+        </p>
+        <ul>
+          <li>1521 - The Philippines are discovered by Europe
+            <ul><li>Colonized by Spain for over 300 years, influencing culture and governance.</li></ul></li>
+          <li>1571 - Regular trade was established between the Spaniards and the Chinese</li>
+          <li>1756 - Start of The Seven Years’ War</li>
+          <li>1763 - End of The Seven Years’ War</li>
+          <li>1820 - Social and economic changes as the Port 72 of Manila opened to foreign commerce</li>
+          <li>1868 - Spanish Revolution when Queen Isabella II deposed</li>
+          <li>1898 - Spanish-American War
+              <ul>
+                <li>Resistance against Spanish rule led by leaders like Andrés Bonifacio.</li>
+                <li>U.S. took control after the Spanish-American War.</li>
+              </ul>
+          </li>
+          <li>1898 - Declaration of Philippine independence from Spaniards
+            <ul>
+              <li>Emilio Aguinaldo declared independence in 1898.</li>
+            </ul>
+          </li>
+          <li>1899 - 1935 First phase of American rule</li>
+          <li>1934 - First constitution.</li>
+          <li>1941 - The Japanese occupied the Philippines
+            <ul>
+              <li>Philippines played a role in World War II, endured Japanese occupation</li>
+            </ul>
+          </li>
+          <li>1946 - The Philippines became a republic
+            <ul>
+              <li>Granted independence from the U.S. on July 4, 1946.</li>
+            </ul>
+          </li>
+          <li>1986 - People Power Revolution
+            <ul>
+              <li>A peaceful uprising ousted dictator Ferdinand Marcos.</li>
+              <li>Restored democracy and paved the way for Philippine freedom.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-5 text-center" style="padding-top: 10%;"><img src="Images/Magellan.webp" style="width: 90%;">
+        <figcaption ><i>Ferdinand Magellan, painting, 1970.</i></figcaption>
+      </div>
+      </div>
+    <hr>
+    <div class="row" id="geography" style="margin-top: 5%;">
+      <div class="col-md-7">
+        <h1>Geography and Environment</h1>
+            <p>Southeast Asian island nation, the Philippines. Its borders are the Sulu Sea to the southwest, the Celebes Sea to the south, the Philippine Sea to the east, and the South China Sea to the west and north. At its southern base, the archipelago is approximately 700 miles (1,130 km) in width from east to west and 1,150 miles (1,850 km) in length from north to south. Originally estimated to number 7,107, the islands were eventually found to number over 7,600. Only around two-fifths of the approximately 350 islands that are at least one square mile (2.6 square kilometers) in size have names. The three main groups of islands are Mindanao (south), Visayas (middle), and Luzon (north and west).
+        </p>
+      </div>
+      <div class="col-md-5 text-center" style="padding-top: 5%;"><img src="Images/map.png" style="width: 50%;">
+        <figcaption ><i>Map Of The Philippines.</i></figcaption>
+      </div>
+      </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-md-5">
+        <h1>Climate</h1>
+            <p>There are three distinct seasons in the Philippines' tropical marine climate: Tag-init/El nino (hot and dry), Tag-ulan/La Nina (rainy), and Tag-lamig (cool and dry). Typhoons frequently occur in the wet season.
+        </p>
+        
+      </div>
+      <div class="col-md-7 text-center" style="padding-top: 5%;">
+        <img src="Images/rain.jpg" style="width: 40%;">
+        <img src="Images/dry.jpg" style="width: 40%;">
+      </div>
+      </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-md-4">
+        <h1>Natural Hazards</h1>
+            <p>Because of its location inside the Pacific Ring of Fire, the Philippines frequently experiences earthquakes and volcanic eruptions. Typhoons, also known as tropical cyclones, happen often, especially from June to November. 
+        </p>
+      </div>
+      <div class="col-md-8 text-center" style="padding-top: 5%;">
+        <img src="Images/magnitude.jpg" style="width: 40%;">
+        <img src="Images/erupt.jpg" style="width: 40%;">
+      </div>
+      </div>
+    <hr>
+      <div class="row" id="demographics" style="margin-top: 5%;">
+        <div class="col-md-7">
+          <h1>Demographics</h1>
+              <p>Because of its location inside the Pacific Ring of Fire, the Philippines frequently experiences earthquakes and volcanic eruptions. Typhoons, also known as tropical cyclones, happen often, especially from June to November. 
+          </p>
+        </div>
+        
+      </div>
+      <div class="row" style="margin-top: 5%;">
+        <div class="col-md-4">
+          <h1>Ethnic Groups</h1>
+              <p>The Philippines harbors a multitude of ethnic communities. The peoples of Tagalog, Cebuano, Ilocano, and Bisaya are among the main groupings.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h1>Languages</h1>
+              <p>The multilingual country recognizes English and Filipino, a language derived from Tagalog, as official languages. There are numerous regional languages and dialects spoken throughout the archipelago.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h1>Religion</h1>
+              <p>The majority religion in the Philippines is Roman Catholic, which dates back more than three centuries to Spanish colonization. Protestant and Muslim minorities are also sizable.
+          </p>
+        </div>
+      </div>
+    
+    <hr>
+    <div class="row" id="culture" style="margin-top: 5%;">
+      <div class="col-md-10">
+        <h1>Culture</h1>
+            <p>The Philippines is a nation where the cultures of East and West collide. The Filipino people have strong Western traditions, but they are unmistakably of Asian heritage. Chinese traders, Spanish conquistadors, and Americans all influenced the evolution of contemporary Filipino culture. Filipinos are recognized for their warmth, especially toward visitors from the West. Because of their strong ties to Spanish culture, Filipinos have an infectious enthusiasm and passion for life that makes them seem more Latin than Asian.
+        </p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-md-10">
+        <h1>Festivals</h1>
+            <p>vibrant events with many colors that happen all over the archipelago. These festivities, which include customary songs, dances, and costumes, usually include elements of history, culture, and religion.
+        </p>
+        <img src="Images/Sinulog.jpg" style="width: 60%;">
+      </div>
+      </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-md-10">
+        <h1>Cuisine</h1>
+            <p>Filipino cuisine combines flavors from China, Spain, the United States, and the native people. Popular street foods and dishes include adobo, sinigang, and lechon
+        </p>
+        <img src="Images/Cuisinee.jpeg" style="width: 60%;">
+      </div>
+      </div>
+    <hr>
+    <div class="row" id="luzon" style="margin-top: 5%;">
+      <center>
+        <h1>Tourist Locations In Luzon</h1>
+      </center>
+      <div class="col-md-4 text-center" style="padding-top: 20px;">
+        <h2>Baguio City</h2>
+            <p>The Philippines is a nation where the cultures of East and West collide. The Filipino people have strong Western traditions, but they are unmistakably of Asian heritage. Chinese traders, Spanish conquistadors, and Americans all influenced the evolution of contemporary Filipino culture. Filipinos are recognized for their warmth, especially toward visitors from the West. Because of their strong ties to Spanish culture, Filipinos have an infectious enthusiasm and passion for life that makes them seem more Latin than Asian.
+        </p>
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;" ">
+        <h2>Ifugao</h2>
+            <p>Make sure to sample the renowned Tinawon rice while in Ifugao. Keep an eye out for the bulul while you look for rice. To protect their rice crops, they have a carved wooden figure in place. If you still can't get enough rice, explore the Rice Terraces of the Philippines, a UNESCO cultural landscape, and climb the 2,000-year-old Banaue Rice Terraces, which the Ifugao people chiseled out of the mountains. Attend the traditional wooden scooter race at the Gotad Ad Ifugao festivals, which are held every June to highlight the ancient cultures and customs of the region, to round off your trip.
+        </p>
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;">
+        <h2>La Union</h2>
+            <p>One of the most popular weekend getaway spots for young people living in Metro Manila. This relaxed seaside town is well-known for its surfing locations, but few people realize that it also offers a plethora of other cultural and natural attractions, including waterfalls, red clay pottery, grape picking, loom weaving, churches for pilgrimage tours, and eco-tours. Explore La Union's offerings and extend your stay beyond a short weekend.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center" style="padding-top: 20px;">
+        <img src="Images/baguio1.png" width="100%">
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;" ">
+        <img src="Images/ifugao1.png" width="100%">
+
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;">
+
+        <img src="Images/LU.png" width="100%">
+      </div>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-md-6 text-center"style="padding-top: 20px;">
+        <h2>Ilocos Sur</h2>
+            <p>You will be thrilled to visit the charming Vigan in Ilocos Sur, which is a UNESCO World Heritage site. The well-preserved Spanish-era houses give the impression of being transported back in time. Remember to stop and sample some of the town's specialties, like Ilocos empanadas and Vigan longganisa, when you're out and about.
+        </p>
+      </div>
+      <div class="col-md-6 text-center"style="padding-top: 20px;">
+        <h2>Manila</h2>
+            <p>For Philippine culture, history, shopping, and nightlife, Manila is a great central location. You'll arrive to vibrant streets full of moving vehicles, tall buildings, and exuberant people, but you'll also never run out of enjoyable things to do.
+        </p>
+      </div>
+      </div>
+    <div class="row">
+      <div class="col-md-6 text-center">
+
+        <img src="Images/Ilocos.png" width="100%">
+      </div>
+      <div class="col-md-6 text-center"">
+        <img src="Images/Manila.png" width="100%">
+      </div>
+      </div>
+    <div class="row" id="visayas" style="margin-top: 5%;">
+      <center>
+        <h1>Tourist Locations In Visayas</h1>
+      </center>
+      <div class="col-md-4 text-center" style="padding-top: 20px;">
+        <h2>Puerto Princesa</h2>
+            <p>See the capital of Palawan, which is also home to the renowned Underground River and a UNESCO World Heritage site. Travelers going to other well-known Palawan destinations like El Nido and Coron will have to pass through this area. But The City in a Forest is more complex than it first appears. You'll be shocked to learn that Puerto Princesa offers a variety of tourists both natural and cultural wonders. 
+        </p>
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;" ">
+        <h2>Coron</h2>
+            <p>One of the most well-liked beach and island destinations in Palawan is Coron. The eastern half of Busuanga Island, Coron Island, and fifty other nearby islets—all of which are unconnected to the main Palawan island—make up this paradisiacal retreat. Its stunning rock formations, unbelievable clear waters, and World War II wreck diving spots have drawn a lot of attention. Because of its stunning waters and surroundings, it is also regarded as the more sedate and easygoing sibling of El Nido, another well-known Palawan destination. When visiting the Philippines, Coron is definitely worth adding to your travel bucket list because of its distinct charm.
+        </p>
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;">
+        <h2>Boracay</h2>
+            <p>Being the Philippines’ top tourist draw and most famous beach took its toll on the island of Boracay. After taking a break for 6 months, Boracay reopens greener than ever—and everything is pristine like never before. Learn more about the new Boracay and be prepared to fall in love all over again. With glorious White Beach and the country's best island nightlife on its resume, it's easy to understand why Boracay is the Philippines' top tourist draw. Alas, the tiny island proved too popular for its own good: In 2018 Boracay was placed in "rehab," closed for 6 months to ease the strain on its fragile environment and fix the infrastructure and carrying capacity.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center" style="padding-top: 20px;">
+        <img src="Images/pprincess.png" width="100%">
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;" ">
+        <img src="Images/Coron.png" width="100%">
+
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;">
+
+        <img src="Images/Boracay.png" width="100%">
+      </div>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-md-6 text-center"style="padding-top: 20px;">
+        <h2>Bohol</h2>
+            <p>The home of the famous Chocolate Hills, Bohol is one of the most visited destinations in the Central Visayas region of the Philippines. The island province offers breathtaking spots for history buffs, beach lovers, and adrenaline junkies. Bohol is comprised of one major island and 73 smaller ones surrounding it, so you'll have plenty of places to explore during your trip here. One thing’s for sure: You’ll enjoy every second of your stay and love the diversity that Bohol offers.
+        </p>
+      </div>
+      <div class="col-md-6 text-center"style="padding-top: 20px;">
+        <h2>Catanduanes</h2>
+            <p>Nestled in the azure embrace of the Philippine Sea, Catanduanes Island is a tropical paradise defined by its lush landscapes, pristine beaches, and captivating rugged terrain. The island province is a haven beckons with its vibrant flora, inviting waters, and a rich cultural tapestry that weaves tales of resilience and natural beauty.
+        </p>
+      </div>
+      </div>
+    <div class="row">
+      <div class="col-md-6 text-center">
+
+        <img src="Images/Bohol.png" width="100%">
+      </div>
+      <div class="col-md-6 text-center"">
+        <img src="Images/Catanduanes.png" width="100%">
+      </div>
+      </div>
+    <div class="row" id="mindanao" style="margin-top: 5%;">
+      <center>
+        <h1>Tourist Locations In Mindanao</h1>
+      </center>
+      <div class="col-md-4 text-center" style="padding-top: 20px;">
+        <h2>Davao City</h2>
+            <p>The regional hub of the Davao Region is Davao City. It is the third-biggest city in the Philippines and the most populated city in Mindanao. One of the most significant economies on the island and the third-largest urban center in the Philippines is Davao City, which is well-known for its thriving business district, urban development, and contemporary amenities.
+        </p>
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;">
+        <h2>Cagayan de Oro City</h2>
+            <p>The hub of Mindanao's business, trade, information technology, and adventure tourism is Cagayan de Oro City. Indeed, it has emerged as the premier convention hub for Mindanao and the Visayas. There are many different types of facilities available to those who are organizing conventions or other events, such as reasonably priced training centers and spacious convention halls. It is known as the "City of Golden Opportunities" and serves as the hub for investment in the region as well as the regional hub for growth in Northern Mindanao. Additionally, it serves as a transshipment hub for industrial and agricultural products from neighboring provinces.
+        </p>
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;" ">
+        <h2>Iligan City</h2>
+            <p>Of the 39 waterfalls that the barangay heads in Iligan City have reported, 23 have been confirmed. The most well-known of these is Maria Cristina Falls, which the National Power Corporation first used in the 1950s. Nearly the whole Island of Mindanao is powered by the electricity produced by the falls, not just the City of Iligan.
+        </p>
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center" style="padding-top: 20px;">
+        <img src="Images/Davao.png" width="100%">
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;" ">
+        <img src="Images/CDO.png" width="100%">
+
+      </div>
+      <div class="col-md-4 text-center"style="padding-top: 20px;">
+
+        <img src="Images/Iligan.png" width="100%" height="75%">
+      </div>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-md-6 text-center"style="padding-top: 20px;">
+        <h2>Sultan Kudarat</h2>
+            <p>Situated in the southwest of the island of Mindanao, Sultan Kudarat was formerly a part of the province of Cotabato, which was under the former empire. This province does in fact contain hundreds of first-class caves. Additionally, the province leads the Philippines in coffee production.
+        </p>
+      </div>
+      <div class="col-md-6 text-center"style="padding-top: 20px;">
+        <h2>Sarangani Province</h2>
+            <p>The Province of Sarangani is situated in the tropical paradise that is the southernmost point of the Philippines. The serene, well-maintained white sand beach is a haven for nature enthusiasts. Enthusiasts of diving and snorkeling will find endless opportunities to explore the amazing diving grounds with their diverse and unspoiled coral gardens. The vibrant marine life will enthrall visitors, and it won't come as a surprise if they become enamored with Sarangani's incredible underwater treasures.
+        </p>
+      </div>
+      </div>
+    <div class="row">
+      <div class="col-md-6 text-center">
+
+        <img src="Images/Sultan.png" width="100%">
+      </div>
+      <div class="col-md-6 text-center"">
+        <img src="Images/Saragani.png" width="100%">
+      </div>
+      </div>
+    <div class="row" style="margin-top: 5%;">
+        <div class="col-md-12 text-center">
+          <h2>References</h2>
+          <p>
+          (n.d.). Home - Love the Philippines! Welcome to the DOT's Corporate Site. Retrieved November 27, 2023, from http://www.tourism.gov.ph/<br>
+          (n.d.). Explore more things to love! | Department of Tourism Philippines. Retrieved November 27, 2023, from https://philippines.travel/<br>
+          \/. (2023, June 16). YouTube. Retrieved November 27, 2023, from http://www.bridgestravel.com/philippines/philippines.htm<br>
+          Culture of the Philippines. (n.d.). CSUB. Retrieved November 27, 2023, from https://www.csub.edu/pacificrim/countryprospectus/culture.htm<br>
+          Demographics of the Philippines - statistics & facts. (2023, June 2). Statista. Retrieved November 27, 2023, from https://www.statista.com/topics/5799/demographics-in-the-philippines/#topicOverview<br>
+          Furlong, M. J. (n.d.). Demographics of the Philippines. Wikipedia. Retrieved November 27, 2023, from https://en.wikipedia.org/wiki/Demographics_of_the_Philippines<br>
+          History of the Philippines | People, Spain, United States, Revolution, Map, & Facts. (2023, October 16). Britannica. Retrieved November 27, 2023, from https://www.britannica.com/topic/history-of-Philippines<br>
+          Philippines History • FamilySearch. (2022, December 5). FamilySearch. Retrieved November 27, 2023, from https://www.familysearch.org/en/wiki/Philippines_History<br>
+          Philippines | History, Map, Flag, Population, Capital, & Facts. (n.d.). Britannica. Retrieved November 27, 2023, from https://www.britannica.com/place/Philippines#ref23724<br>
+          Philippines History • FamilySearch. (2022, December 5). FamilySearch. Retrieved December 6, 2023, from https://www.familysearch.org/en/wiki/Philippines_History#Timeline<br>
+          Jacobo, J. (2023, June 14). Mayon volcano eruption wreaking havoc on Philippine island could last for months. ABC News. Retrieved December 6, 2023, from https://abcnews.go.com/International/mayon-volcano-eruption-wreaking-havoc-philippine-island-months/story?id=100069038<br></p>
+        </div>
+    </div>
+  </div>
+  <div class="row footer" style="background-color: #0d0630;margin-top: 8%;  margin-left: 50px; padding-top: 20px; padding-left: 10px; margin-right: 5px;">
+    <div class="col-md-3">
+      <h4>About Philippines</h4>
+      <ul>
+        <li><a href="Videos.html" > Video Gallery </a></li>
+        <li><a href="Login.html" > Log-In </a></li>
+        <li><a href="Contact.html"> Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h4>Tourist Attractions</h4>
+      <ul>
+        <li><a href="index.html#history"> History </a></li>
+        <li><a href="index.html#geography"> Geography and Environment </a></li>
+        <li><a href="index.html#demographics"> Demographics </a></li>
+        <li><a href="index.html#culture"> Culture </a></li>
+      </ul>
+    </div>
+    <div class="col-md-2 text-center">
+      <a href="Videos.html"><h4>Video Gallery</h4></a>
+    </div>
+    <div class="col-md-2 text-center">
+      <a href="Login.html"><h4>Login</h4></a>
+    </div>
+    <div class="col-md-2 text-center">
+      <a href="Contact.html"><h4>Contact Us</h4></a>
+    </div>
+    <center style="color: white; margin-top: 10px; margin-bottom: 10px;">Copyright @2023. All Rights Reserved.</center>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    
+  </script>
+</body>
+
+</html>

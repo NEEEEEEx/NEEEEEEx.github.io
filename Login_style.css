@@ -1,0 +1,264 @@
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css');
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+html {
+   height: 100%;
+}
+header {
+  position: fixed;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 65px;
+  background-color: #0d0630;
+  padding: 10px;
+  width: 100%;
+  z-index: 1001;
+}
+
+header img {
+  padding-left: 10px;
+}
+
+.datetime {
+  color: white;
+  padding: 7px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.date {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.time {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  text-align: center;
+}
+.sidenav {
+  margin-top: 65px;
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #4C5760;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: width 0.1s ease-in-out;
+}
+.sidenav .preview {
+  display: none;
+}
+
+.sidenav:not(:hover) .preview {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+  color:lightgray;
+
+}
+.sidenav {
+  width: 50px;
+}
+
+.sidenav:hover {
+  width: 250px;
+}
+
+
+.sidenav a,
+.dropdown-btn {
+  display: none;
+  margin-top: 5px;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: black;
+  background-color: #93a8ac;
+  display: block;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn .45s ease-in-out;
+}
+
+.sidenav:hover a,
+.sidenav:hover .dropdown-btn {
+  display: block;
+}
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: black;
+  background-color: #93a8ac;
+}
+body {
+min-height: 100%;
+font-family: 'lato', sans-serif;
+color: #fff;
+background: #16222A; 
+}
+
+.container {
+  margin-top: 10%;
+  background:rgba(58,63,68,0.5);
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+  width:450px;
+  display: flex;  
+  flex-direction: column;
+}
+
+.logo{
+  font-family: "museo-slab";  
+  font-size:20px;
+  text-align: center;
+  padding: 20px 20px 0;
+  margin:0;
+}
+
+.login-item {
+  color: #ffff;
+  padding:25px 25px 0;
+  margin: 20px 20px 0;	
+  border-radius: 3px;
+}
+
+input {
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.user:before {
+  content: '\f007';
+  font: 14px fontawesome;
+  color: #5b5b5b;
+}
+
+.lock:before {
+  content: '\f023';
+  font: 14px fontawesome;
+  color: #5b5b5b;
+}
+
+.form input[type="password"], .form input[type="text"], button[type="submit"], .form textarea {
+  width: 100%;
+}
+
+.form-login label,.form textarea,
+.form-login input[type="text"],
+.form-login input[type="password"],
+button[type="submit"]{
+  border-radius: 0.25rem;
+  padding: 1rem;
+  color: #3A3F44;  
+}
+
+.form-login label {
+  background-color: #222222;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.form-login input[type="text"], .form-login input[type="password"],.form textarea {
+  background-color: #ffffff;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.form textarea:hover, .form-login input[type="text"]:focus, .form-login input[type="text"]:hover, .form-login input[type="password"]:focus, .form-login input[type="password"]:hover {
+  background-color: #eeeeee;
+}
+
+button[type="submit"] {
+  background-color: #00B9BC;
+  border: none;
+  font-size: 20px;
+  color: #eee;
+  font-weight: bold;
+  text-transform: uppercase;
+} 
+button[type="submit"]:focus, .form-login input[type="submit"]:hover {
+  background-color: #197071;
+}
+.form-field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.footer h4{
+  color:white;
+}
+.footer ul, .footer li, .footer a{
+  list-style-type: none;
+  text-decoration: none;
+}
+.footer a{
+  color: white;
+}
+.footer a:hover{
+  color: #4C5760;
+  text-decoration: underline;
+}

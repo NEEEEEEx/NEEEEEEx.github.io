@@ -1,0 +1,151 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+header {
+  position: fixed;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 65px;
+  background-color: #0d0630;
+  padding: 10px;
+  width: 100%;
+  z-index: 1001;
+}
+
+header img {
+  padding-left: 10px;
+}
+#history,#geography,#demographics,#luzon,#visayas,#mindanao{
+  scroll-margin-top: 100px;
+}
+
+.datetime {
+  color: white;
+  padding: 7px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.date {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.time {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sidenav {
+  margin-top: 65px;
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #4C5760;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: width 0.1s ease-in-out;
+}
+.sidenav .preview {
+  display: none;
+}
+
+.sidenav:not(:hover) .preview {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+  color:lightgray;
+  
+}
+.sidenav {
+  width: 50px;
+}
+
+.sidenav:hover {
+  width: 250px;
+}
+
+
+.sidenav a,
+.dropdown-btn {
+  display: none;
+  margin-top: 5px;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: black;
+  background-color: #93a8ac;
+  display: block;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn .45s ease-in-out;
+}
+
+
+
+
+.sidenav:hover a,
+.sidenav:hover .dropdown-btn {
+  display: block;
+}
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: black;
+  background-color: #93a8ac;
+}
+
+.footer h4{
+  color:white;
+}
+.footer ul, .footer li, .footer a{
+  list-style-type: none;
+  text-decoration: none;
+}
+.footer a{
+  color: white;
+}
+.footer a:hover{
+  color: #4C5760;
+  text-decoration: underline;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ITT406 - Dela Torre </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="Login_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+</head>
+
+<body onload="initClock()">
+  <header>
+    <a href="index.html" style="display:flex;">
+    <img src="coatOfArms.png">
+    <img src="philLogo.png">
+    </a>
+    <div class="datetime">
+      <div class="date">
+        <span id="dayname">Day</span>,
+        <span id="month">Month</span>
+        <span id="daynum">00</span>,
+        <span id="year">Year</span>
+      </div>
+      <div class="time">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+        <span id="period">AM</span>
+      </div>
+    </div>
+  </header>
+  <div class="sidenav">
+    <i class="preview fa fa-reorder"></i>
+    <button class="dropdown-btn fade-in"> About Philippines 
+    <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="index.html#history"> History </a>
+      <a href="index.html#geography"> Geography and Environment </a>
+      <a href="index.html#demographics"> Demographics </a>
+      <a href="index.html#culture"> Culture </a>
+    </div>
+    <button class="dropdown-btn fade-in"> Tourist Attractions 
+    <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="index.html#luzon"> Luzon </a>
+      <a href="index.html#visayas"> Visayas </a>
+      <a href="index.html#mindanao"> Mindanao </a>
+    </div>
+    <a href="Videos.html" class="fade-in"><i class="fa fa-fw fa-youtube-play"></i> Video Gallery </a>
+    <a href="Login.html" class="fade-in"><i class="fa fa-fw fa-user"></i> Log-In </a>
+    <a href="Contact.html" class="fade-in"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+  </div>
+
+  <script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+  </script>
+  <div style="margin-top:8% ;margin-left: 5%;">
+  <div class="container">
+      <div class="logo">Contact Us</div>
+      <div class="login-item">
+        <form action="https://midterms.neeeeeex.repl.co/Carousel.html" method="post" class="form form-login">
+          <div class="form-field">
+            <input id="Fname" type="text" class="form-input" placeholder="First Name" required>
+          </div>
+
+          <div class="form-field">
+            <input id="Lname" type="text" class="form-input" placeholder="Last Name" required>
+          </div>
+
+          <div class="form-field">
+            <input id="Email" type="text" class="form-input" placeholder="Email" required>
+          </div>
+          
+          <div class="form-field">
+            <textarea id="comment" name="comment" rows="10" cols="30" placeholder="Enter comment/s" required=""></textarea>
+          </div>
+          <div class="form-field">
+            <button type="submit" id="submitbutton" onclick="validate()" > Log in </button>
+          </div>
+        </form>
+
+        
+      </div>
+  </div></div>
+  <div class="row footer" style="background-color: #0d0630;margin-top: 8%;  margin-left: 50px; padding-top: 20px; padding-left: 10px; margin-right: 5px;">
+    <div class="col-md-3">
+      <h4>About Philippines</h4>
+      <ul>
+        <li><a href="Videos.html" > Video Gallery </a></li>
+        <li><a href="Login.html" > Log-In </a></li>
+        <li><a href="Contact.html"> Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h4>Tourist Attractions</h4>
+      <ul>
+        <li><a href="index.html#history"> History </a></li>
+        <li><a href="index.html#geography"> Geography and Environment </a></li>
+        <li><a href="index.html#demographics"> Demographics </a></li>
+        <li><a href="index.html#culture"> Culture </a></li>
+      </ul>
+    </div>
+    <div class="col-md-2 text-center">
+      <a href="Videos.html"><h4>Video Gallery</h4></a>
+    </div>
+    <div class="col-md-2 text-center">
+      <a href="Login.html"><h4>Login</h4></a>
+    </div>
+    <div class="col-md-2 text-center">
+      <a href="Contact.html"><h4>Contact Us</h4></a>
+    </div>
+    <center style="color: white; margin-top: 10px; margin-bottom: 10px;">Copyright @2023. All Rights Reserved.</center>
+  </div>
+</html>
