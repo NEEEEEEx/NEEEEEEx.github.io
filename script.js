@@ -44,7 +44,7 @@ var uname = document.getElementById("login-username").value;
 var password = document.getElementById("login-password").value;
 if ( uname == "IIT406" && password == "LETRAN"){
   alert ("Login successfully");
-  window.location.href = "https://midterms.neeeeeex.repl.co/About%20me.html"; 
+  window.location.href = "Midterms/About me.html"; 
   return false;
 }
 else{
